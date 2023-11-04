@@ -6,3 +6,13 @@
 <p>The youngest director in our dataset right now is <a href="/directors/<%= Director.where.not({:dob => nil}).all.order({:dob => :asc}).at(-1).id %>"><%= Director.where.not({:dob => nil}).all.order({:dob => :asc}).at(-1).name %></a>, born on <%= formatted_date %>.</p>
 
 <p>(<a href="http://strftime.net/" target="_blank">http://strftime.net/</a> is handy for putting together the formatting strings for the <code>.strftime</code> method.)</p>
+
+
+<ol>
+<% Director.all.each do |name| %>
+
+<li><%= name.name %></li>
+
+
+<%end%>
+</ol> 
