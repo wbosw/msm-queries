@@ -11,5 +11,8 @@
 #  updated_at :datetime         not null
 #
 class Director < ApplicationRecord
-end
+  def summary
+    "I am director ##{self.id}. My name is #{self.name}."
+  end
 
+end

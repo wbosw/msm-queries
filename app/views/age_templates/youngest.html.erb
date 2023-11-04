@@ -7,6 +7,13 @@
 
 <p>(<a href="http://strftime.net/" target="_blank">http://strftime.net/</a> is handy for putting together the formatting strings for the <code>.strftime</code> method.)</p>
 
+<%= Director.all %>
+
+<hr>
+<%= Director.all.at(0) %>
+
+<hr>
+<%= Director.all.at(1).summary %>
 
 <ol>
 <% Director.all.each do |name| %>
